@@ -1,0 +1,10 @@
+---
+import Welcome from '../components/Welcome.astro';
+import Counter from '../components/Counter.svelte';
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout>
+	<Welcome />
+	<Counter client:load />
+</Layout>

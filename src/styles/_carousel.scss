@@ -1,0 +1,111 @@
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 720px;
+  overflow: hidden;
+  perspective: 1600px;
+  cursor: grab;
+  user-select: none;
+}
+
+.carousel:active {
+  cursor: grabbing;
+}
+
+.carousel-track {
+  position: relative;
+  width: 100%;
+  height: 90%;
+}
+
+.carousel-card {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform-style: preserve-3d;
+  will-change: transform;
+
+  @include mobile {
+    width: 90%;
+  }
+}
+
+.drag-indicator {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform-style: preserve-3d;
+  will-change: transform;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #666;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+.custom-cursor {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  display: none;
+  pointer-events: none;
+  z-index: 1000;
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s ease-out;
+  
+  span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .cursor-blob {
+    position: absolute;
+    top: 50%;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.6);
+    transform: translateY(-50%);
+    
+    &.cursor-blob-left {
+      left: -25px;
+    }
+    
+    &.cursor-blob-right {
+      right: -25px;
+    }
+  }
+}
+
+// Mobile responsive styles
+@include mobile {
+  .carousel {
+    height: 600px;
+    perspective: 1000px;
+  }
+  
+  .drag-indicator {
+    display: none;
+  }
+  
+  .custom-cursor {
+    display: none !important;
+  }
+}
+
+@include tablet {
+  .carousel {
+    height: 680px;
+    perspective: 1400px;
+  }
+}

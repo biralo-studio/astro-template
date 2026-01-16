@@ -1,0 +1,20 @@
+section {
+  width: 100%;
+
+  .inner {
+    max-width: 1312px;
+    margin: auto;
+  }
+  
+  @include desktop {
+    padding: 6rem 4rem;
+  }
+
+  @include tablet-or-smaller {
+    padding: 4rem 2rem;
+  }
+
+  @include mobile {
+    padding: 2rem 1rem;
+  }
+}

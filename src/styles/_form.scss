@@ -1,0 +1,87 @@
+form {
+    input {
+        padding: 1rem;
+        border: 1px solid rgba($black, 0.3);
+
+        &::placeholder {
+            color: $primary;
+        }
+
+        &:focus {
+            border: 1px solid $primary;
+        }
+    }
+
+    .phone-input {
+        display: flex;
+        align-items: center;
+
+        .select-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            padding: 1rem;
+            background-color: $white;
+            border: 1px solid rgba($black, 0.3);
+
+            .country-flag {
+                margin: 0;
+                width: 24px;
+                aspect-ratio: 1/1;
+                object-fit: contain;
+            }
+
+            .country-code {
+                border: none;
+                outline: none;
+
+                option {
+                    color: $black;
+                }
+            }
+        }
+
+        input {
+        }
+    }
+
+    textarea {
+        padding: 1rem;
+        border: 1px solid rgba($black, 0.3);
+        resize: none;
+
+        &::placeholder {
+            color: $primary;
+        }
+
+        &:focus {
+            border: 1px solid $primary;
+        }
+    }
+
+    .radio-items {
+        padding: 1rem 0rem;
+        max-width: 350px;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+        line-height: 1.2;
+
+        @include mobile {
+            display: grid;
+            gap: 1rem;
+        }
+    }
+
+    .radio-item {
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+    }
+
+    .required {
+        font-size: 22px;
+        color: red;
+    }
+}

@@ -1,0 +1,44 @@
+footer {
+  background: $primary;
+  color: $black;
+
+  svg {
+    padding: 1rem;
+    margin-left: 20px;
+
+    @include mobile {
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+  h2 {
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+  }
+
+  h2,
+  li,
+  p,
+  a {
+    font-size: 14px;
+    color: $black;
+  }
+
+  ul {
+    padding: 0;
+    @include mobile {
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+  .footer-bottom {
+    p {
+      text-align: center;
+      margin: 0;
+      padding: 2rem;
+      font-size: 14px;
+    }
+  }
+}

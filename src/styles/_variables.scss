@@ -1,0 +1,21 @@
+$black: #464d42;
+$white: #FEFEFE;
+$primary: #a556ae;
+$secondary: #841884;
+$tertiary: #f9d255;
+
+
+:root {
+  --primary: $primary;
+  --secondary: $secondary;
+  --tertiary: $tertiary;
+  --black: $black;
+  --white: $white;
+  --primary-font: "Nunito Sans", sans-serif;
+  --secondary-font: 'Nunito Sans Condensed', sans-serif;
+  --tertiary-font: 'Doto', sans-serif;
+}
+
+textarea{
+  font-family: var(--body-font);
+}
