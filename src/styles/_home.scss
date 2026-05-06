@@ -1,5 +1,4 @@
-@import "breakpoints";
-@import "variables";
+@use "utils" as *;
 
 .hero {
   width: 100%;

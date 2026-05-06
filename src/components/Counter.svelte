@@ -11,6 +11,9 @@
 </section>
 
 <style lang="scss">
+  @use "sass:color";
+  @use "utils" as *;
+
   button {
     padding: 0.5rem 1rem;
     background-color: $primary;
@@ -20,7 +23,7 @@
     transition: background-color 150ms ease;
 
     &:hover {
-      background-color: darken($primary, 10%);
+      background-color: color.adjust($primary, $lightness: -10%);
     }
   }
 </style>
